@@ -18,7 +18,7 @@
 		</style>
 					
 	</head>
-	<body ng-controller="myValues">
+	<body ng-controller="myValues" background="img/stage.jpg" id="body" class="container">
 		<div class="col-12-md text-center">
 			<br><br><br><br>
 			<h2>BOOK SEARCH: </h2><input type="text" id="search" ng-model="books">
@@ -31,10 +31,10 @@
 			
 			<table>
 				<thead ng-show="val" ng-cloak>
-					<th ng-cloak><h2 ng-cloak class="text-center">Title</h2></th>
-					<th ng-cloak><h2 ng-cloak class="text-center">Author</h2></th>
-					<th ng-cloak><h2 ng-cloak class="text-center">Snippet</h2></th>
-					<th ng-cloak><h2 ng-cloak class="text-center">Cover</h2></th>
+					<th ><h2 class="text-center">Title</h2></th>
+					<th ><h2 class="text-center">Author</h2></th>
+					<th ><h2 class="text-center">Snippet</h2></th>
+					<th ><h2 class="text-center">Cover</h2></th>
 				</thead>
 			  <tr ng-repeat="x in array">
 			    <td><h2>{{ x.volumeInfo.title }}</h2></td>
