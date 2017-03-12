@@ -1,0 +1,32 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+			  display: none !important;
+}
+
+input {
+	border-radius: 3px;
+}
+
+h2 {
+	color: red;
+}
+
+hr {
+	color = red;
+	ba
+}
+
+Body {
+	background-color: #8eafe5;
+}
+
+td {
+	margin: 2px solid black;
+	border: 2px solid black;
+	padding: 5px;
+}
+
+th {
+	margin: 2px solid black;
+	border: 2px solid black;
+}
+

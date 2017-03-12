@@ -1,0 +1,53 @@
+<!Doctype html>
+ <html ng-app="myApp">
+	<head>
+		<title>Angular Google Books</title>
+		<!-- jquery cdn -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- bootstrap cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- javascript cdn -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- AngulaeJs cdn -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<style>
+			[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+			  display: none !important;
+			}
+		</style>
+					
+	</head>
+	<body ng-controller="myValues">
+		<div class="col-12-md text-center">
+			<br><br><br><br>
+			<h2>BOOK SEARCH: </h2><input type="text" id="search" ng-model="books">
+			<br><br>
+			<button class="btn btn-caution" id="button" ng-click="bookSearch(books)" >search</button>
+		
+			</div>
+		<div class="col-12-md text-center">
+				<br><br>
+			
+			<table>
+				<thead ng-show="val" ng-cloak>
+					<th ng-cloak><h2 ng-cloak class="text-center">Title</h2></th>
+					<th ng-cloak><h2 ng-cloak class="text-center">Author</h2></th>
+					<th ng-cloak><h2 ng-cloak class="text-center">Snippet</h2></th>
+					<th ng-cloak><h2 ng-cloak class="text-center">Cover</h2></th>
+				</thead>
+			  <tr ng-repeat="x in array">
+			    <td><h2>{{ x.volumeInfo.title }}</h2></td>
+			    <td>{{ x.volumeInfo.authors }}</td>
+			    <td>{{ x.searchInfo.textSnippet }}</td>
+			     <td><a ng-href={{x.volumeInfo.previewLink}}><img ng-src="{{x.volumeInfo.imageLinks.thumbnail}}"/></a></td>
+			  </tr>
+			</table>
+						
+		</div>
+
+
+		<script type="text/javascript"  src="js/app.js"></script>
+
+	</body>
+</html>
